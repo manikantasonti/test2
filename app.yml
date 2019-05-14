@@ -1,0 +1,25 @@
+--- 
+pull_requests:
+  auto_create:
+
+  auto_merge:
+    branches:
+      - develop
+    exclude:
+      labels:
+        - work-in-progress
+
+  approvals:
+    patterns:
+      up: +1
+      down: -1
+    number_required: 1
+    team: approvers
+    exempt:
+      creator:
+        - iautobot
+
+    branches:
+      develop:
+        team: approvers
+        number_required: 1
